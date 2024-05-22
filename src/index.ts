@@ -40,7 +40,7 @@ class Circle {
     this.dy += this.gravity;
     this.y += this.dy;
 
-    console.log(this.y);
+
 
     if (this.y + this.radius > canvas.height) {
       this.y = canvas.height - this.radius;
@@ -71,9 +71,7 @@ class App {
     if (ctx) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      console.log({
-        circles: this.circles,
-      });
+  
       for (const circle of this.circles) {
         circle.update();
       }
